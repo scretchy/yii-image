@@ -10,6 +10,8 @@
  */
 
 /**
+ * Base font event.
+ * 
  * @author  Igor Golovanov <igor.golovanov@gmail.com>
  * 
  * @property-read YiiImageFont $font Font.

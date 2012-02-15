@@ -7,7 +7,7 @@ Installation and Configuring
 ============================
 
   1. Extract those files to folder "extention/yii-image"
-  2. You can set configuration in main config.
+  2. Set configuration in main config.
 
 ``` php
 
@@ -40,6 +40,12 @@ return array(
 
 ```
 
+  3. Available driver names:
+
+    * gd
+    * imagick
+    * gmagick
+
 Using
 =====
 
@@ -67,3 +73,50 @@ $drawer->line(new YiiImagePoint(3, 3), new YiiImagePoint(50, 50), new YiiImageCo
 $img->save($path, array('format' => 'png'));
 
 ```
+
+Events and Behaviors
+====================
+
+The names of all available event can be found in the following classes:
+    
+    * YiiImageDriverEvents
+    * YiiImageProviderEvents
+    * YiiImageDrawerEvents
+    * YiiImageFontEvents
+
+Events can be attached as:
+
+  1. Closure/function/method 
+
+``` php
+
+<?php
+
+$img = Yii::app()->image->create(new YiiImageBox(800, 600));
+
+/**
+ * Closure.
+ */
+$img->onBeforeSave = function(YiiImageProviderEventOnSave $event)
+{
+    if(file_exists()) {
+        throw new Exception(sprintf('File "%s" already exists!', $event->savePath));
+    }
+};
+
+/**
+ * Object.
+ */
+$model = new UserModel();
+$img->onBeforeSave = array($model, 'beforeSaveImageCheckFreeSpace');
+
+```
+
+  2. Behaviors.
+
+To expand the existing base classes available behaviors:
+
+    * YiiImageDriverBehavior
+    * YiiImageProviderBehavior
+    * YiiImageDrawerBehavior
+    * YiiImageFontBehavior 

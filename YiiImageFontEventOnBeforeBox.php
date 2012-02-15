@@ -13,7 +13,7 @@
  * @author  Igor Golovanov <igor.golovanov@gmail.com>
  * 
  * 
- * @property string $text Text.
+ * @property string  $text  Text.
  * @property integer $angle Angle.
  */
 class YiiImageFontEventOnBeforeBox extends YiiImageFontEvent

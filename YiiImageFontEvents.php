@@ -17,12 +17,12 @@
 class YiiImageFontEvents extends CEnumerable
 {
     /**
-     * Name of the event, which will be called after the create box.
+     * Name of the event, which will be called after calculate font box.
      */
     const onAfterBox  = 'onAfterBox';
     
     /**
-     * Name of the event, which will be called before the create box.
+     * Name of the event, which will be called before calculate font box.
      */
     const onBeforeBox = 'onBeforeBox';
 

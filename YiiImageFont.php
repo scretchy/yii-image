@@ -18,10 +18,11 @@
  * @property-read   YiiImageColor   $color      Color.
  * @property-write  array           $behaviors  Behaviors.
  * 
- * @property-write string|array|Closure $onAfterBox Event {@link YiiImageFont::onAfterBox}
- * @property-read CList $onAfterBox Event {@link YiiImageFont::onAfterBox}
- * @property-write string|array|Closure $onBeforeBox Event {@link YiiImageFont::onAfterBox}
- * @property-read CList $onBeforeBox Event {@link YiiImageFont::onAfterBox}
+ * @property-write string|array|Closure $onAfterBox     Event {@link YiiImageFont::onAfterBox}
+ * @property-write string|array|Closure $onBeforeBox    Event {@link YiiImageFont::onAfterBox}
+ * 
+ * @property-read CList $onAfterBox     Event {@link YiiImageFont::onAfterBox}
+ * @property-read CList $onBeforeBox    Event {@link YiiImageFont::onAfterBox}
  */
 abstract class YiiImageFont extends CComponent
 {
