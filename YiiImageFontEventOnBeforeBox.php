@@ -10,6 +10,8 @@
  */
 
 /**
+ * Font event.
+ * 
  * @author  Igor Golovanov <igor.golovanov@gmail.com>
  * 
  * 

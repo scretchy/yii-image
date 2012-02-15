@@ -90,7 +90,7 @@ class YiiImageProviderEventOnSave extends YiiImageProviderEvent
      */
     public function getSavePath()
     {
-        return $this->_path;
+        return $this->_pathPath;
     }
 
     /**
@@ -107,7 +107,7 @@ class YiiImageProviderEventOnSave extends YiiImageProviderEvent
         if (0 === strlen(trim($path))) {
             throw new InvalidArgumentException('Path can\'t be empty!');
         }
-        $this->_path = $path;
+        $this->_pathPath = $path;
     }
 
 }
