@@ -99,7 +99,7 @@ $img = Yii::app()->image->create(new YiiImageBox(800, 600));
  */
 $img->onBeforeSave = function(YiiImageProviderEventOnSave $event)
 {
-    if(file_exists()) {
+    if(file_exists($event->savePath)) {
         throw new Exception(sprintf('File "%s" already exists!', $event->savePath));
     }
 };
